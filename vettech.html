@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vet Tech Solutions | Fresh Eggs. Pure Quality.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: #26352a;
+            background: #fffdf7;
+            line-height: 1.6;
+        }
+
+        :root {
+            --green: #24452d;
+            --dark-green: #17331f;
+            --light-green: #e8f0e4;
+            --yellow: #e6a91a;
+            --cream: #fff8e8;
+            --white: #ffffff;
+            --dark: #1e2921;
+            --gray: #68736b;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: var(--yellow);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            color: var(--green);
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            max-width: 600px;
+            margin: 12px auto 0;
+            color: var(--gray);
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 22px 0;
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--yellow);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+        }
+
+        .logo-text {
+            line-height: 1.1;
+        }
+
+        .logo-text strong {
+            display: block;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .logo-text small {
+            font-size: 10px;
+            letter-spacing: 2px;
+            opacity: .8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd76a;
+        }
+
+        .nav-btn {
+            background: var(--yellow);
+            color: #222 !important;
+            padding: 11px 22px;
+            border-radius: 30px;
+            font-weight: 700 !important;
+        }
+
+        .nav-btn:hover {
+            background: white;
+            color: var(--green) !important;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(18, 45, 26, .96) 0%,
+                    rgba(18, 45, 26, .82) 45%,
+                    rgba(18, 45, 26, .25) 100%
+                ),
+                url("https://images.unsplash.com/photo-1587486913049-53fc88980cfc?auto=format&fit=crop&w=2000&q=85")
+                center/cover;
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            color: white;
+            padding-top: 60px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            color: #ffe08a;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 20px;
+            animation: fadeUp .8s ease;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(50px, 7vw, 88px);
+            line-height: 1.05;
+            max-width: 750px;
+            animation: fadeUp 1s ease;
+        }
+
+        .hero h1 span {
+            color: #ffd24f;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 25px 0;
+            font-size: 18px;
+            color: #edf4eb;
+            animation: fadeUp 1.2s ease;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            animation: fadeUp 1.4s ease;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--yellow);
+            color: #222;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            background: #ffd45b;
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,.6);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--green);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 45px;
+            margin-top: 55px;
+            animation: fadeUp 1.6s ease;
+        }
+
+        .egg-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 24px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 999px;
+            padding: 10px 16px;
+            backdrop-filter: blur(6px);
+            animation: fadeUp 1.5s ease;
+        }
+
+        .egg-button {
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffefb5, #f7cb4d);
+            color: #163422;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(230, 169, 26, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .egg-button:hover {
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 12px 28px rgba(230, 169, 26, 0.5);
+        }
+
+        .egg-message {
+            color: #f3f7ef;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .hero-stat strong {
+            font-size: 25px;
+            display: block;
+        }
+
+        .hero-stat span {
+            font-size: 13px;
+            color: #d7e2d9;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            padding: 110px 0;
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.12);
+        }
+
+        .experience-box {
+            position: absolute;
+            right: -25px;
+            bottom: 30px;
+            background: var(--yellow);
+            padding: 25px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        }
+
+        .experience-box strong {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            display: block;
+        }
+
+        .about-content span {
+            color: var(--yellow);
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 45px;
+            line-height: 1.15;
+            color: var(--green);
+            margin: 12px 0 20px;
+        }
+
+        .about-content p {
+            color: var(--gray);
+            margin-bottom: 18px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .about-list li {
+            margin: 12px 0;
+            font-weight: 600;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: var(--yellow);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .products {
+            padding: 110px 0;
+            background: var(--cream);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(31, 55, 37, .08);
+            transition: .4s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(31, 55, 37, .16);
+        }
+
+        .product-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        .product-number {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: white;
+            color: var(--green);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 10px;
+            border-radius: 20px;
+        }
+
+        .product-content {
+            padding: 22px;
+        }
+
+        .product-content h3 {
+            font-family: "Playfair Display", serif;
+            color: var(--green);
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .product-content p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .product-link {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .product-link:hover {
+            color: var(--yellow);
+        }
+
+        /* =========================
+           QUALITY
+        ========================= */
+
+        .quality {
+            padding: 110px 0;
+            background: var(--green);
+            color: white;
+        }
+
+        .quality .section-title h2 {
+            color: white;
+        }
+
+        .quality .section-title p {
+            color: #cbd8ce;
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .quality-card {
+            text-align: center;
+            padding: 35px 25px;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 18px;
+            transition: .3s;
+        }
+
+        .quality-card:hover {
+            background: rgba(255,255,255,.08);
+            transform: translateY(-7px);
+        }
+
+        .quality-icon {
+            width: 65px;
+            height: 65px;
+            background: var(--yellow);
+            color: var(--green);
+            margin: auto auto 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+        }
+
+        .quality-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .quality-card p {
+            color: #c8d5ca;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            padding: 110px 0;
+            background: white;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            position: relative;
+        }
+
+        .process-card {
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .process-number {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--light-green);
+            color: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto auto 18px;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .process-card h3 {
+            color: var(--green);
+            margin-bottom: 8px;
+        }
+
+        .process-card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 100px 0;
+            background:
+                linear-gradient(rgba(20,52,28,.88), rgba(20,52,28,.88)),
+                url("https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1800&q=80")
+                center/cover;
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 48px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 18px auto 30px;
+            color: #e2ebe4;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #122319;
+            color: white;
+            padding: 65px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 45px;
+            padding-bottom: 45px;
+        }
+
+        .footer-brand p {
+            color: #aebdb2;
+            margin-top: 18px;
+            max-width: 330px;
+            font-size: 14px;
+        }
+
+        footer h3 {
+            margin-bottom: 18px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #aebdb2;
+            text-decoration: none;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        footer a:hover {
+            color: var(--yellow);
+        }
+
+        .footer-contact p {
+            color: #aebdb2;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding-top: 22px;
+            text-align: center;
+            color: #87978c;
+            font-size: 13px;
+        }
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1050px) {
+
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .quality-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 850px;
+            }
+
+            .hero-content {
+                padding-top: 100px;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image img {
+                height: 400px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 220px;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+            .about-content h2 {
+                font-size: 36px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quality-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-box {
+                right: 10px;
+            }
+
+            .cta h2 {
+                font-size: 36px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+
+                <div class="logo-icon">
+                    🥚
+                </div>
+
+                <div class="logo-text">
+                    <strong>VET TECH</strong>
+                    <small>SOLUTIONS</small>
+                </div>
+
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#products">Our Eggs</a>
+                </li>
+
+                <li>
+                    <a href="#quality">Quality</a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-btn">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                Fresh • Natural • Trusted
+            </span>
+
+            <h1>
+                Fresh Eggs.
+                <br>
+                <span>Pure Quality.</span>
+            </h1>
+
+            <p>
+                Quality eggs supplied with care, freshness and consistency.
+                From everyday essentials to specialty eggs, Vet Tech Solutions
+                brings trusted quality to every order.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="btn btn-primary">
+                    Explore Our Eggs →
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Get In Touch
+                </a>
+
+            </div>
+
+            <div class="egg-badge">
+                <button class="egg-button" type="button" aria-label="Fresh egg surprise">🥚</button>
+                <span class="egg-message" id="eggMessage">Freshly laid, just for you.</span>
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="hero-stat">
+                    <strong>5+</strong>
+                    <span>Egg Varieties</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>100%</strong>
+                    <span>Quality Focused</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>Fresh</strong>
+                    <span>Every Delivery</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&w=1000&q=85"
+                        alt="Fresh eggs">
+
+                    <div class="experience-box">
+
+                        <strong>100%</strong>
+
+                        <span>Quality Focus</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <span>Who We Are</span>
+
+                    <h2>
+                        Bringing freshness to every table.
+                    </h2>
+
+                    <p>
+                        Vet Tech Solutions is dedicated to supplying quality
+                        eggs for homes, retailers, restaurants, hotels and
+                        businesses.
+                    </p>
+
+                    <p>
+                        We focus on freshness, careful handling and dependable
+                        supply so our customers can enjoy eggs they can trust.
+                    </p>
+
+                    <ul class="about-list">
+
+                        <li>Fresh and carefully selected eggs</li>
+
+                        <li>Hygienic handling and packaging</li>
+
+                        <li>Reliable supply for bulk requirements</li>
+
+                        <li>Multiple egg varieties</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================== -->
+
+    <section class="products" id="products">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Our Collection</span>
+
+                <h2>Eggs For Every Need</h2>
+
+                <p>
+                    Choose from our carefully selected range of fresh and
+                    nutritious eggs.
+                </p>
+
+            </div>
+
+
+            <div class="product-grid">
+
+
+                <!-- MEDIUM -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1569288052389-dac9b01c9c4d?auto=format&fit=crop&w=800&q=80"
+                            alt="Medium eggs">
+
+                        <span class="product-number">
+                            01
+                        </span>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Medium Eggs</h3>
+
+                        <p>
+                            Fresh everyday eggs, perfect for home cooking,
+                            breakfast and baking.
+                        </p>
+
+                        <a href="#contact" class="product-link">
+                            Enquire Now →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LARGE -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1598965675045-45c5e72c7d05?auto=format&fit=crop&w=800&q=80"
+                            alt="Large eggs">
+
+                        <span class="product-number">
+                            02
+                        </span>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Large Eggs</h3>
+
+                        <p>
+                            Larger eggs offering great value for families,
+                            restaurants and commercial kitchens.
+                        </p>
+
+                        <a href="#contact" class="product-link">
+                            Enquire Now →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXTRA LARGE -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?auto=format&fit=crop&w=800&q=80"
+                            alt="Extra large eggs">
+
+                        <span class="product-number">
+                            03
+                        </span>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Extra Large</h3>
+
+                        <p>
+                            Premium-sized eggs selected for customers who
+                            prefer a generous serving.
+                        </p>
+
+                        <a href="#contact" class="product-link">
+                            Enquire Now →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DOUBLE YOLK -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1506976785307-8732e854ad03?auto=format&fit=crop&w=800&q=80"
+                            alt="Double yolk egg">
+
+                        <span class="product-number">
+                            04
+                        </span>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Double Yolk</h3>
+
+                        <p>
+                            A special egg variety known for its distinctive
+                            double-yolk experience.
+                        </p>
+
+                        <a href="#contact" class="product-link">
+                            Enquire Now →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUAIL -->
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?auto=format&fit=crop&w=800&q=80"
+                            alt="Quail eggs">
+
+                        <span class="product-number">
+                            05
+                        </span>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <h3>Quail Eggs</h3>
+
+                        <p>
+                            Small, distinctive and versatile eggs perfect
+                            for specialty dishes and gourmet meals.
+                        </p>
+
+                        <a href="#contact" class="product-link">
+                            Enquire Now →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUALITY
+    ========================== -->
+
+    <section class="quality" id="quality">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Why Choose Us</span>
+
+                <h2>Quality You Can Count On</h2>
+
+                <p>
+                    We believe every egg should meet high standards of
+                    freshness, quality and care.
+                </p>
+
+            </div>
+
+
+            <div class="quality-grid">
+
+
+                <div class="quality-card">
+
+                    <div class="quality-icon">
+                        🥚
+                    </div>
+
+                    <h3>Fresh Products</h3>
+
+                    <p>
+                        Carefully selected eggs supplied with freshness
+                        as our priority.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-card">
+
+                    <div class="quality-icon">
+                        ✦
+                    </div>
+
+                    <h3>Quality First</h3>
+
+                    <p>
+                        We maintain consistent quality across our
+                        range of egg products.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-card">
+
+                    <div class="quality-icon">
+                        🚚
+                    </div>
+
+                    <h3>Reliable Supply</h3>
+
+                    <p>
+                        Dependable supply solutions for retailers,
+                        restaurants and businesses.
+                    </p>
+
+                </div>
+
+
+                <div class="quality-card">
+
+                    <div class="quality-icon">
+                        🤝
+                    </div>
+
+                    <h3>Trusted Service</h3>
+
+                    <p>
+                        Customer satisfaction and long-term relationships
+                        are at the heart of our business.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROCESS
+    ========================== -->
+
+    <section class="process">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Our Approach</span>
+
+                <h2>From Farm To You</h2>
+
+                <p>
+                    Every step is handled with care to maintain freshness
+                    and quality.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <h3>Selection</h3>
+
+                    <p>
+                        Eggs are carefully selected based on quality
+                        and requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <h3>Quality Check</h3>
+
+                    <p>
+                        Products are checked to maintain consistent
+                        quality standards.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <h3>Safe Packing</h3>
+
+                    <p>
+                        Eggs are handled and packed carefully to
+                        protect product quality.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+                    <h3>Delivery</h3>
+
+                    <p>
+                        Orders are supplied reliably to customers
+                        and business partners.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta" id="contact">
+
+        <div class="container">
+
+            <h2>
+                Looking for Fresh Eggs in Bulk?
+            </h2>
+
+            <p>
+                Whether you're a retailer, restaurant, hotel or distributor,
+                Vet Tech Solutions is ready to supply quality eggs for your needs.
+            </p>
+
+            <a href="mailto:info@vettechsolutions.com"
+                class="btn btn-primary">
+                Contact Us Today →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a href="#home" class="logo">
+
+                        <div class="logo-icon">
+                            🥚
+                        </div>
+
+                        <div class="logo-text">
+
+                            <strong>VET TECH</strong>
+
+                            <small>SOLUTIONS</small>
+
+                        </div>
+
+                    </a>
+
+                    <p>
+                        Quality eggs. Reliable supply. Trusted service.
+                        Bringing freshness and care to every order.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#about">About Us</a>
+                        </li>
+
+                        <li>
+                            <a href="#products">Our Eggs</a>
+                        </li>
+
+                        <li>
+                            <a href="#quality">Quality</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Products</h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#products">Medium Eggs</a>
+                        </li>
+
+                        <li>
+                            <a href="#products">Large Eggs</a>
+                        </li>
+
+                        <li>
+                            <a href="#products">Extra Large</a>
+                        </li>
+
+                        <li>
+                            <a href="#products">Double Yolk</a>
+                        </li>
+
+                        <li>
+                            <a href="#products">Quail Eggs</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <h3>Contact</h3>
+
+                    <p>📍 Tamil Nadu, India</p>
+
+                    <p>📞 +91 XXXXX XXXXX</p>
+
+                    <p>✉ info@vettechsolutions.com</p>
+
+                    <p>🕐 Mon - Sat: 9:00 AM - 6:00 PM</p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 Vet Tech Solutions. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        const eggButton = document.querySelector('.egg-button');
+        const eggMessage = document.getElementById('eggMessage');
+
+        if (eggButton && eggMessage) {
+            eggButton.addEventListener('click', () => {
+                const currentText = eggMessage.textContent.trim();
+                eggMessage.textContent = currentText === 'Freshly laid, just for you.'
+                    ? 'That was the golden egg moment.'
+                    : 'Freshly laid, just for you.';
+            });
+        }
+    </script>
+
+</body>
+
+</html>
